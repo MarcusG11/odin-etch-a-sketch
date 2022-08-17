@@ -1,0 +1,10 @@
+.divscontainer {
+  margin: 50px;
+}
+
+.divscontainer > * {
+  display: inline-block;
+  background-color: lightgray;
+  height: 200px;
+  width: 200px;
+}
