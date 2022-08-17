@@ -7,8 +7,6 @@ document.querySelector("button").addEventListener("click", () => {
   }
 });
 
-for (i = 0; i < gridNumber; i++) {}
-
 const div1 = document.createElement("div");
 const div2 = document.createElement("div");
 const div3 = document.createElement("div");
@@ -26,33 +24,25 @@ const div14 = document.createElement("div");
 const div15 = document.createElement("div");
 const div16 = document.createElement("div");
 
-document.querySelectorAll(".divscontainer").forEach((item) => {
-  item.classList.add("sketch-arena");
-});
-// div1.classList.add("sketch-area");
-// div2.classList.add("sketch-area");
-// div3.classList.add("sketch-area");
-// div4.classList.add("sketch-area");
-// div5.classList.add("sketch-area");
-// div6.classList.add("sketch-area");
-// div7.classList.add("sketch-area");
-// div8.classList.add("sketch-area");
-// div9.classList.add("sketch-area");
-// div10.classList.add("sketch-area");
-// div11.classList.add("sketch-area");
-// div12.classList.add("sketch-area");
-// div13.classList.add("sketch-area");
-// div14.classList.add("sketch-area");
-// div15.classList.add("sketch-area");
-// div16.classList.add("sketch-area");
+div1.classList.add("sketch-area");
+div2.classList.add("sketch-area");
+div3.classList.add("sketch-area");
+div4.classList.add("sketch-area");
+div5.classList.add("sketch-area");
+div6.classList.add("sketch-area");
+div7.classList.add("sketch-area");
+div8.classList.add("sketch-area");
+div9.classList.add("sketch-area");
+div10.classList.add("sketch-area");
+div11.classList.add("sketch-area");
+div12.classList.add("sketch-area");
+div13.classList.add("sketch-area");
+div14.classList.add("sketch-area");
+div15.classList.add("sketch-area");
+div16.classList.add("sketch-area");
 
-document.querySelectorAll(".divscontainer").forEach((item) => {
-  const colorChanger = document.getElementsByClassName("sketch-area");
-  item.addEventListener("onmouseenter", () => {
-    for (let i = 0; i < colorChanger.length; i++) {
-      colorChanger[i].style.backgroundColor = "black";
-    }
-  });
+document.querySelectorAll(".sketch-area").forEach((item) => {
+  item.addEventListener("hover", (event) => {});
 });
 
 const container = document.querySelector(".divscontainer");
