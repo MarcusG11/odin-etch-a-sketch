@@ -3,7 +3,7 @@ document.querySelector("button").addEventListener("click", () => {
   if (gridNumber <= 100) {
     howManyDivs(gridNumber);
   } else {
-    alert("Uh oh! The maxium input allowed is 100.");
+    alert("Uh oh! The maximum input allowed is 100.");
   }
 });
 
@@ -13,13 +13,21 @@ function howManyDivs(gridNumber) {
   for (let i = 0; i < gridNumber; i++) {
     const div = document.createElement("div");
     container.appendChild(div).classList.add("sketch-area");
+    colorChanger();
   }
-  colorChanger();
 }
 
 function colorChanger() {
-  container.addEventListener("mouseenter", () => {});
+  container.addEventListener("mouseenter", () => {
+    grayToBlack();
+  });
 }
+
+function grayToBlack() {
+  const groupedDivs = document.querySelector(".sketch-area");
+  groupedDivs.style.backgroundColor = "black";
+}
+
 // const div1 = document.createElement("div");
 // const div2 = document.createElement("div");
 // const div3 = document.createElement("div");
