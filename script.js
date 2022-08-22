@@ -12,21 +12,22 @@ const container = document.querySelector(".divscontainer");
 function howManyDivs(gridNumber) {
   for (let i = 0; i < gridNumber; i++) {
     const div = document.createElement("div");
-    container.appendChild(div).classList.add("sketch-area");
-    colorChanger();
+    container.appendChild(div).classList.add(i);
+  }
+  const children = document.querySelectorAll(".divscontainer > *");
+  for (let i = 0; i < children.length; i++) {
+    children[i].addEventListener("mouseenter", () => {
+      children[i].style.backgroundColor = "black";
+    });
   }
 }
 
-function colorChanger() {
-  container.addEventListener("mouseenter", () => {
-    grayToBlack();
-  });
-}
+// function colorChanger() {
+//   container.addEventListener("mouseenter", () => {
+//   });
+// }
 
-function grayToBlack() {
-  const groupedDivs = document.querySelector(".sketch-area");
-  groupedDivs.style.backgroundColor = "black";
-}
+// function grayToBlack() {}
 
 // const div1 = document.createElement("div");
 // const div2 = document.createElement("div");
