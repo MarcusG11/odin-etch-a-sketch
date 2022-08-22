@@ -1,10 +1,41 @@
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 .divscontainer {
+  display: grid;
   margin: 50px;
+  padding: 5px;
+  width: 480px;
+  height: 480px;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .divscontainer > * {
-  display: inline-block;
   background-color: lightgray;
-  height: 200px;
-  width: 200px;
+  margin: 0;
+}
+
+.containerOfContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttoncontainer {
+  display: flex;
+  justify-content: space-around;
 }
